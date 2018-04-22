@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>VuePress | 国际化</title>
+    <meta name="description" content="translation for VuePress">
+    
+    <link rel="preload" href="/vuepresstranslate/assets/css/0.styles.f5dbeada.css" as="style"><link rel="preload" href="/vuepresstranslate/assets/js/app.952d0165.js" as="script"><link rel="preload" href="/vuepresstranslate/assets/js/4.16f1654d.js" as="script"><link rel="prefetch" href="/vuepresstranslate/assets/js/6.5aac14fc.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/1.4293d629.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/2.b81a2014.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/3.1e35def3.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/5.f9658bd4.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/7.0624c7d2.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/8.4491fae4.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/9.46753174.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/10.21ecf6f1.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/11.4d9ac015.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/12.79fed2c4.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/13.aa34e723.js">
+    <link rel="stylesheet" href="/vuepresstranslate/assets/css/0.styles.f5dbeada.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/vuepresstranslate/" class="router-link-active"><!----><span class="site-name">
+      VuePress
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><a href="/vuepresstranslate/guide/" class="router-link-active">
+      指南
+    </a><a href="/vuepresstranslate/ConfigReference/">
+      参考配置
+    </a><a href="/vuepresstranslate/DefaultThemeConfig/">
+      默认主题
+    </a><!----></nav></div></header><div class="sidebar"><nav class="nav-links"><a href="/vuepresstranslate/guide/" class="router-link-active">
+      指南
+    </a><a href="/vuepresstranslate/ConfigReference/">
+      参考配置
+    </a><a href="/vuepresstranslate/DefaultThemeConfig/">
+      默认主题
+    </a><!----></nav><ul class="sidebar-links"><li><a href="/vuepresstranslate/guide/" class="sidebar-link">Vuepress 翻译</a></li><li><a href="/vuepresstranslate/guide/introduce.html" class="sidebar-link">简介</a></li><li><a href="/vuepresstranslate/guide/gettingStart.html" class="sidebar-link">开始</a></li><li><a href="/vuepresstranslate/guide/configuration.html" class="sidebar-link">配置</a></li><li><a href="/vuepresstranslate/guide/assetHandling.html" class="sidebar-link">资源处理</a></li><li><a href="/vuepresstranslate/guide/markdownExtensions.html" class="sidebar-link">Markdown 扩展</a></li><li><a href="/vuepresstranslate/guide/useVueInMarkDown.html" class="sidebar-link">/guide/useVueInMarkDown.html</a></li><li><a href="/vuepresstranslate/guide/customTheme.html" class="sidebar-link">自定义主题</a></li><li><a href="/vuepresstranslate/guide/internationalization.html" class="active sidebar-link">国际化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepresstranslate/guide/internationalization.html#站点级别-i18n-配置" class="sidebar-link">站点级别 i18n 配置</a></li><li class="sidebar-sub-header"><a href="/vuepresstranslate/guide/internationalization.html#默认主题-i18n-配置" class="sidebar-link">默认主题 i18n 配置</a></li></ul></li><li><a href="/vuepresstranslate/guide/deploying.html" class="sidebar-link">部署</a></li></ul></div><div class="page"><div class="content"><h1 id="国际化"><a href="#国际化" aria-hidden="true" class="header-anchor">#</a> 国际化</h1><h2 id="站点级别-i18n-配置"><a href="#站点级别-i18n-配置" aria-hidden="true" class="header-anchor">#</a> 站点级别 i18n 配置</h2><p>为了在 VuePress 力支持多语言，你首先需要下面的文件结构：</p><pre class="language-text"><code>/
+├─ README.md
+├─ foo.md
+├─ /nested/
+│  └─ README.md
+└─ /zh/
+   ├─ README.md
+   ├─ foo.md
+   └─ /zh/nested/
+      └─ README.md
+</code></pre><p>然后，在<code>.vuepress/config.js</code>里指定<code>locales</code>选项：</p><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// The key is the path for the locale to be nested under.</span>
+    <span class="token comment">// As a special case, the default locale can use '/' as its path.</span>
+    <span class="token string">'/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      lang<span class="token punctuation">:</span> <span class="token string">'en-US'</span><span class="token punctuation">,</span> <span class="token comment">// this will be set as the lang attribute on &lt;html&gt;</span>
+      title<span class="token punctuation">:</span> <span class="token string">'VuePress'</span><span class="token punctuation">,</span>
+      description<span class="token punctuation">:</span> <span class="token string">'Vue-powered Static Site Generator'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token string">'/zh/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      lang<span class="token punctuation">:</span> <span class="token string">'zh-CN'</span><span class="token punctuation">,</span>
+      title<span class="token punctuation">:</span> <span class="token string">'VuePress'</span><span class="token punctuation">,</span>
+      description<span class="token punctuation">:</span> <span class="token string">'Vue 驱动的静态网站生成器'</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p>如果本地没有<code>title</code>或者<code>description</code>，VuePress 将退回到根层级的值。你可以忽略根级别的<code>title</code>和<code>description</code>,知道它们在本地被提供。</p><h2 id="默认主题-i18n-配置"><a href="#默认主题-i18n-配置" aria-hidden="true" class="header-anchor">#</a> 默认主题 i18n 配置</h2><p>默认主题通过<code>themeConfig.locales</code>内嵌 i18n 的支持，使用同样<code>{ path: config }</code>转换。每一个本地可以有它自己的<a href="https://vuepress.vuejs.org/default-theme-config/#navbar-links" target="_blank" rel="noopener noreferrer">导航</a>和<a href="https://vuepress.vuejs.org/default-theme-config/#sidebar" target="_blank" rel="noopener noreferrer">侧边栏</a>配置，此外少量文字可以跨站点使用：</p><pre class="language-js"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">/* ... */</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  themeConfig<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    locales<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token string">'/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// text for the language dropdown</span>
+        selectText<span class="token punctuation">:</span> <span class="token string">'Languages'</span><span class="token punctuation">,</span>
+        <span class="token comment">// label for this locale in the language dropdown</span>
+        label<span class="token punctuation">:</span> <span class="token string">'English'</span><span class="token punctuation">,</span>
+        <span class="token comment">// text for the edit-on-github link</span>
+        editLinkText<span class="token punctuation">:</span> <span class="token string">'Edit this page on GitHub'</span><span class="token punctuation">,</span>
+        nav<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">'Nested'</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">'/nested/'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        sidebar<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">'/'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">/* ... */</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token string">'/nested/'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">/* ... */</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token string">'/zh/'</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        selectText<span class="token punctuation">:</span> <span class="token string">'选择语言'</span><span class="token punctuation">,</span>
+        label<span class="token punctuation">:</span> <span class="token string">'简体中文'</span><span class="token punctuation">,</span>
+        editLinkText<span class="token punctuation">:</span> <span class="token string">'在 GitHub 上编辑此页'</span><span class="token punctuation">,</span>
+        nav<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> text<span class="token punctuation">:</span> <span class="token string">'嵌套'</span><span class="token punctuation">,</span> link<span class="token punctuation">:</span> <span class="token string">'/zh/nested/'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        sidebar<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+          <span class="token string">'/zh/'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">/* ... */</span>
+          <span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token string">'/zh/nested/'</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+            <span class="token comment">/* ... */</span>
+          <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/vuepresstranslate/guide/customTheme.html" class="prev">
+          自定义主题
+        </a></span><span class="next"><a href="/vuepresstranslate/guide/deploying.html">
+          部署
+        </a> →
+      </span></p></div></div></div></div>
+    <script src="/vuepresstranslate/assets/js/4.16f1654d.js" defer></script><script src="/vuepresstranslate/assets/js/app.952d0165.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>VuePress | 部署</title>
+    <meta name="description" content="translation for VuePress">
+    
+    <link rel="preload" href="/vuepresstranslate/assets/css/0.styles.f5dbeada.css" as="style"><link rel="preload" href="/vuepresstranslate/assets/js/app.952d0165.js" as="script"><link rel="preload" href="/vuepresstranslate/assets/js/6.5aac14fc.js" as="script"><link rel="prefetch" href="/vuepresstranslate/assets/js/1.4293d629.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/2.b81a2014.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/3.1e35def3.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/4.16f1654d.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/5.f9658bd4.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/7.0624c7d2.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/8.4491fae4.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/9.46753174.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/10.21ecf6f1.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/11.4d9ac015.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/12.79fed2c4.js"><link rel="prefetch" href="/vuepresstranslate/assets/js/13.aa34e723.js">
+    <link rel="stylesheet" href="/vuepresstranslate/assets/css/0.styles.f5dbeada.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/vuepresstranslate/" class="router-link-active"><!----><span class="site-name">
+      VuePress
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><a href="/vuepresstranslate/guide/" class="router-link-active">
+      指南
+    </a><a href="/vuepresstranslate/ConfigReference/">
+      参考配置
+    </a><a href="/vuepresstranslate/DefaultThemeConfig/">
+      默认主题
+    </a><!----></nav></div></header><div class="sidebar"><nav class="nav-links"><a href="/vuepresstranslate/guide/" class="router-link-active">
+      指南
+    </a><a href="/vuepresstranslate/ConfigReference/">
+      参考配置
+    </a><a href="/vuepresstranslate/DefaultThemeConfig/">
+      默认主题
+    </a><!----></nav><ul class="sidebar-links"><li><a href="/vuepresstranslate/guide/" class="sidebar-link">Vuepress 翻译</a></li><li><a href="/vuepresstranslate/guide/introduce.html" class="sidebar-link">简介</a></li><li><a href="/vuepresstranslate/guide/gettingStart.html" class="sidebar-link">开始</a></li><li><a href="/vuepresstranslate/guide/configuration.html" class="sidebar-link">配置</a></li><li><a href="/vuepresstranslate/guide/assetHandling.html" class="sidebar-link">资源处理</a></li><li><a href="/vuepresstranslate/guide/markdownExtensions.html" class="sidebar-link">Markdown 扩展</a></li><li><a href="/vuepresstranslate/guide/useVueInMarkDown.html" class="sidebar-link">/guide/useVueInMarkDown.html</a></li><li><a href="/vuepresstranslate/guide/customTheme.html" class="sidebar-link">自定义主题</a></li><li><a href="/vuepresstranslate/guide/internationalization.html" class="sidebar-link">国际化</a></li><li><a href="/vuepresstranslate/guide/deploying.html" class="active sidebar-link">部署</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepresstranslate/guide/deploying.html#github-pages" class="sidebar-link">Github Pages</a></li><li class="sidebar-sub-header"><a href="/vuepresstranslate/guide/deploying.html#netlify" class="sidebar-link">Netlify</a></li></ul></li></ul></div><div class="page"><div class="content"><h1 id="部署"><a href="#部署" aria-hidden="true" class="header-anchor">#</a> 部署</h1><p>下面的引导假设你把文档放在项目里的<code>docs</code>目录里，并使用默认构建输出位置。</p><h2 id="github-pages"><a href="#github-pages" aria-hidden="true" class="header-anchor">#</a> Github Pages</h2><ol><li><p>在<code>.vuepress/config.js</code>将<code>base</code>设置为你仓库的名字。例如，如果仓库名为<code>https://github.com/foo/bar</code>，发布的页面将在<code>https://github.com/foo/bar</code>。在这种情况下，你应该设置<code>base</code>为<code>&quot;/bar/&quot;</code>。</p></li><li><p>在项目里，运行：</p></li></ol><pre class="language-bash"><code><span class="token comment"># build</span>
+vuepress build docs
+
+<span class="token comment"># navigate into the build output directory</span>
+<span class="token function">cd</span> docs/.vuepress/dist
+
+<span class="token function">git</span> init
+<span class="token function">git</span> add -A
+<span class="token function">git</span> commit -m <span class="token string">'deploy'</span>
+
+<span class="token comment"># push to the gh-pages branch of your repo.</span>
+<span class="token comment"># replace &lt;USERNAME&gt;/&lt;REPO&gt; with your info</span>
+<span class="token function">git</span> push -f git@github.com:<span class="token operator">&lt;</span>USERNAME<span class="token operator">&gt;</span>/<span class="token operator">&lt;</span>REPO<span class="token operator">&gt;</span>.git master:gh-pages
+</code></pre><p>可以在持续集成工具里执行这个脚本，方便在每个 push 的时候自动发布。</p><h2 id="netlify"><a href="#netlify" aria-hidden="true" class="header-anchor">#</a> Netlify</h2><ol><li>确保你的已经有了构建文档的 npm 脚本：</li></ol><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;docs:build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress build docs&quot;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><ol start="2"><li>在 Netlify，按照下面的步骤从 Github 新建项目：</li></ol><ul><li>构建命令： <code>npm run docs:build</code>或<code>yarn docs:build</code></li><li>发布目录：<code>docs/.vuepress/dist</code></li></ul><ol start="3"><li>按下发布按钮！</li></ol></div><!----><div class="content page-nav"><p class="inner"><span class="prev">
+        ← <a href="/vuepresstranslate/guide/internationalization.html" class="prev">
+          国际化
+        </a></span><!----></p></div></div></div></div>
+    <script src="/vuepresstranslate/assets/js/6.5aac14fc.js" defer></script><script src="/vuepresstranslate/assets/js/app.952d0165.js" defer></script>
+  </body>
+</html>
