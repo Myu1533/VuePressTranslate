@@ -1,0 +1,20 @@
+{
+  "name": "vuepress",
+  "version": "0.0.1",
+  "description": "vuepress translate",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "vuepress": "^0.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "author": "",
+  "license": "MIT"
+}
