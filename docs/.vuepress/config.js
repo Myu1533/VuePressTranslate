@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/vuepresstranslate',
   dest: 'vuepress',
   lang: 'zh-CN',
   title: 'VuePress',
@@ -6,9 +7,18 @@ module.exports = {
   themeConfig: {
     nav: [
       // { text: '首页', link: '/' },
-      { text: '指南', link: '/guide/' },
-      { text: '参考配置', link: '/ConfigReference/' },
-      { text: '默认主题', link: '/DefaultThemeConfig/' }
+      {
+        text: '指南',
+        link: '/guide/'
+      },
+      {
+        text: '参考配置',
+        link: '/ConfigReference/'
+      },
+      {
+        text: '默认主题',
+        link: '/DefaultThemeConfig/'
+      }
     ],
     sidebar: {
       '/guide/': [
@@ -28,22 +38,20 @@ module.exports = {
 };
 
 function genSidebarConfig(title) {
-  return [
-    {
-      title,
-      collapsable: false,
-      children: [
-        '',
-        'introduce',
-        'gettingStart',
-        'configuration',
-        'assetHandling',
-        'markdownExtensions',
-        'usingVueInMarkdown',
-        'customThemes',
-        'internationalization',
-        'deploying'
-      ]
-    }
-  ];
+  return [{
+    title,
+    collapsable: false,
+    children: [
+      '',
+      'introduce',
+      'gettingStart',
+      'configuration',
+      'assetHandling',
+      'markdownExtensions',
+      'usingVueInMarkdown',
+      'customThemes',
+      'internationalization',
+      'deploying'
+    ]
+  }];
 }
