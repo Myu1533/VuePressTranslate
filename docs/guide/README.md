@@ -1,7 +1,3 @@
----
-sideBar: auto
----
-
 # Vuepress 翻译
 
 ![img](https://vuepress.vuejs.org/hero.png)

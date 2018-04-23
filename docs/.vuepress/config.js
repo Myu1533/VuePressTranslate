@@ -1,7 +1,4 @@
 module.exports = {
-  base: '/vuepresstranslate',
-  dest: 'vuepress',
-  lang: 'zh-CN',
   title: 'VuePress',
   description: 'translation for VuePress',
   themeConfig: {
@@ -13,11 +10,11 @@ module.exports = {
       },
       {
         text: '参考配置',
-        link: '/ConfigReference/'
+        link: '/configReference/'
       },
       {
         text: '默认主题',
-        link: '/DefaultThemeConfig/'
+        link: '/defaultThemeConfig/'
       }
     ],
     sidebar: {
@@ -36,22 +33,3 @@ module.exports = {
     }
   }
 };
-
-function genSidebarConfig(title) {
-  return [{
-    title,
-    collapsable: false,
-    children: [
-      '',
-      'introduce',
-      'gettingStart',
-      'configuration',
-      'assetHandling',
-      'markdownExtensions',
-      'usingVueInMarkdown',
-      'customThemes',
-      'internationalization',
-      'deploying'
-    ]
-  }];
-}

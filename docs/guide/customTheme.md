@@ -1,7 +1,3 @@
----
-sideBar: auto
----
-
 # 自定义主题
 
 ::: tip TIP

@@ -1,7 +1,3 @@
----
-sideBar: auto
----
-
 # Markdown 扩展
 
 ## 头信息锚点

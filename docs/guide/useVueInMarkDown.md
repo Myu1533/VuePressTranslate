@@ -1,7 +1,3 @@
-<!-- ---
-sideBar: auto
---- -->
-
 # 在 Markdown 里面使用 Vue
 
 ## 浏览器 API 访问限制
