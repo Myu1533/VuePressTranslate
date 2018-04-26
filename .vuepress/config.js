@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/vuepress/',
   title: 'VuePress',
   description: 'translation for VuePress',
   themeConfig: {
